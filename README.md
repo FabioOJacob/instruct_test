@@ -31,9 +31,9 @@ Com a classe `Point` implementada o próximo passo é implementar as funções:
 
 Os dois parâmetros devem ser uma instância da classe `Point`, a função deve subir uma exceção se receber algum outro tipo de parâmetro.
 
-A `euclidean_distance` deve retornar a distância euclideana entre os dois pontos (ver https://pt.wikipedia.org/wiki/Dist%C3%A2ncia_euclidiana)
+A `euclidean_distance` deve retornar a distância euclidiana entre os dois pontos (ver [Distância Euclidiana](https://pt.wikipedia.org/wiki/Dist%C3%A2ncia_euclidiana))
 
-A `manhattan_distance` deve retornar a distância de manhattan entre os dois pontos (ver https://pt.wikipedia.org/wiki/Geometria_do_t%C3%A1xi)
+A `manhattan_distance` deve retornar a distância de manhattan entre os dois pontos (ver [Distância de Manhattan](https://pt.wikipedia.org/wiki/Geometria_do_t%C3%A1xi))
 
 ## Validação
 
