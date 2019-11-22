@@ -23,8 +23,22 @@ class Point():
     >>> a.x
     3.0
     """
-    pass
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        if type(self.x) != float and type(self.y) != float:
+            raise ValueError('both coordinates value must be float')
 
+    def __repr__(self):
+        return f'{self.__class__.__name__}({str(self.x)}, {str(self.y)})'
+
+
+def verifica(a, b):
+    if type(a) != Point:
+        raise ValueError('a must be a Point')
+    elif type(b) != Point:
+        raise ValueError('b must be a Point')
+    
 
 def euclidean_distance(a, b):
     """
@@ -41,7 +55,12 @@ def euclidean_distance(a, b):
         ...
     ValueError: b must be a Point
     """
-    return 0.0
+    from math import sqrt
+
+    verifica(a, b)
+    dist = sqrt( (a.x - b.x)**2 + (a.y - b.y)**2 )
+
+    return dist
 
 def manhattan_distance(a, b):
     """
@@ -58,7 +77,12 @@ def manhattan_distance(a, b):
         ...
     ValueError: b must be a Point
     """
-    return 0.0
+    from math import fabs
+
+    verifica(a, b)
+    dist = fabs( a.x - b.x) + fabs( a.y - b.y)
+
+    return dist
 
 if __name__ == "__main__":
     import doctest
